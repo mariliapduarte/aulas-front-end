@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Responsivo com uso da medida REM</title>
+<style>
+
+    /* REGRAS INICIAIS independente do tamanho da tela */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {font-size: 16px;} /* Ja é a regra padrão, porém colocando aqui, declaramos explicitamente o valor. */
+
+body {
+    background-color: cornsilk;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1  {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: rgb(48, 1, 92);
+}
+
+h2 { font-size: 1.2rem;}
+
+/* Media Query (regra condicional) */
+
+@media screen and (min-width: 758px) {
+    /* regras CSS */
+    /* Para apontar uma nova font-size raiz adicionar novo valor de HTML */
+    html {font-size: 20px;}
+    h1 {text-align: center;}
+    }
+
+@media screen and (min-width: 1000px) {
+    html { font-size: 24px; }
+    hr {display: none;}
+    h1 {border-bottom: solid 2px;}
+}
+
+</style>
+</head>
+<body>
+    <h1>Design Responsivo</h1>
+    <hr>
+    <p>Conjunto de técnicas de desenvolvimento front-end (CSS) visando a construção de sites que funcionem corretamente em diversos dispositivos e tamanhos de tela.</p>
+
+    <h2>Abordagens usadas: </h2>
+
+    <ul>
+        <li><b>Mobile First</b>: desenvolvimento pensado <b>primeiro</b> para <b>telas pequenas</b> </li>
+        <li><b>Desktop First</b>: desenvolvimento pensado <b>primeiro</b> para <b>telas grandes</b> </li>
+    </ul>
+
+    <p><i><b>Obs.:</b> A abordagem <b>Mobile First</b> é mais utilizada atualmente.</i></p>
+
+    
+</body>
+</html>

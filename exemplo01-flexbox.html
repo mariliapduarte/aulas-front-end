@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+/* DIV pai */
+#exemplo {
+    border: solid 2px rgb(5, 5, 5);
+    width: 70%;
+    height: 200px;
+    margin: auto;
+
+    display: flex;  /* habilita o flexbox tornando o box um flex container, tudo dentro desta div vai ficar lado a lado.*/
+    justify-content: space-evenly; /* space-around, between, evenly - analisar todas */
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.caixas {
+    text-align: center;
+    padding-top: 10px;
+    width: 150px;
+    height: 50px;
+    background-color: burlywood;
+    border: solid 1px black;
+}
+
+#um {
+    background-color: rgba(128, 255, 0, 0.603);
+    width: 150px;
+    }
+
+    #dois {
+        background-color: rgb(187, 125, 187);
+        width: 150px;
+    }
+
+</style>
+</head>
+<body>
+    <h1>Alinhamento de elementos e conteúdo com Flexbox</h1>
+    <hr>
+    <p>Flexbox é um mecanismo CSS3 que permite aplicar alinhamento, espaçamento e distribuição de elementos no HTML.</p>
+
+    <h2>Exemplo</h2>
+
+    <div id="exemplo"> <!-- div#exemplo atalho para criar id e div.exemplo para criar classe *3 para definir a quantidade = div.exemplo*4 -->
+
+        <div class="caixas" id="um">UM</div>
+        <div class="caixas" id="dois">DOIS</div>
+        <div class="caixas">TRES</div>
+        <div class="caixas">QUATRO</div>
+        <div class="caixas">CINCO</div>
+        <div class="caixas">SEIS</div>
+
+</div>
+
+</body>
+</html>

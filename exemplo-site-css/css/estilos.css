@@ -1,0 +1,119 @@
+/* REGRAS CSS */
+
+
+*, *::after, *::before{ /* seletor universal - altera TODO CONTEÚDO da pag*/
+    /* pseudo elemento (::after/ ::before) abrange tudo e,absoluto */
+    box-sizing: border-box;
+}
+
+/* injetar um conteúdo decorativo dentro de outro conteúdo, antes ou depois (não tem acessibilidade)*/
+h2::after {
+    content: "  :)"; 
+}
+
+/* Seletor tag */
+body { 
+    background-image: url(../imagens/tarde.jpg);/* ../ PARA VOLTAR PASTA ANTERIOR */
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Seletor identificado/ID */
+#container { 
+    background-color: rgba(240, 248, 255, 0.671);
+    width: 70%;
+    margin: auto; /* Centralização da caixa */
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 20px 20px 20px rgb(180, 178, 140);
+}
+    
+
+img {
+    max-width: 100%; /* max-width usa o tamanho máx da imagem, torna a flexivel*/
+    /* width: 100%; - utilizado para que a imagem acompanhe o tamanho total da tela */
+    text-align: center;
+        filter: grayscale(100%);
+        transition: 2s;
+}
+    
+img:hover {
+        filter: grayscale(0);
+    }
+    
+
+h1 {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    border-bottom: solid 5px;
+    font-size: 40px;
+    text-shadow: rgb(13, 107, 161) 2px 2px 6px;
+}
+
+h2 {
+    color: darkblue;
+    text-shadow: rgb(2, 33, 51) 2px 2px 6px, darkgreen -2px -2px;
+   
+}
+
+    /* para alinhar somente a "Introdução" vamos utiliar outro seletor, o seletor classe */
+    /* Criar a classe aqui e colocar a TAG diretamente no HTML, onde desejar. EX:<h2 class="centralizar">Introdução</h2> */
+/* a diferença entre ID e CLASS é que o ID só pode usar uma vez e CLASS pode ser utilizado diversas vezes */
+.centralizar {text-align: center;} 
+.sombra-texto {text-shadow: black 3px 3px 4px;}
+.canto-arredondado {border-radius: 10px;}
+.destaque {
+    background-color: yellow;
+    border: solid 1px;
+    padding: 5px;
+}
+
+#primeiro-paragrafo-index {
+    line-height: 30px;
+}
+
+
+/* regra inicial do link */
+
+nav a { /* comando de "SELETOR DESCENDENTE": formate os links que pertencem a tag NAV */
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: rgba(43, 3, 3, 0.404);
+    padding: 15px 20px; /* 1ºvalor = cima/baixo - 2ºvalor = esq/dir */
+    display: inline-block; /* transforma os links em meio termo entre bloco e inline - originalmente inline */
+    width: 33.33%;
+    text-align: center;    
+    }
+    
+
+/* regra de acionamneto do link 
+pseudo-classe: hover */
+
+nav a:hover {
+    background-color: rgba(5, 2, 43, 0.493);
+    color: rgb(253, 253, 253);
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    filter: grayscale(100%);
+    transition: 2s;
+}
+
+figure img:hover {
+    filter: grayscale(0);
+}
+
+
+
+
+
+
+
+

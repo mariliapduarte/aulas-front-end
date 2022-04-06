@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="color: cadetblue;">Introdução ao CSS</title> 
+    <style> /*  <style> é uma TAG dentro do head para fazer uma regra de formatação de todos os elementos que desejar */
+        p { 
+            color: rgb(126, 58, 58); /* p= seletor; color= propriedade; rgb= valor */
+            text-align: justify; 
+            font-family:verdana;
+
+        }
+
+        h2 {
+            text-align: center;
+            font-family:Verdana;
+            color: rgb(30, 116, 170);
+
+            /* Versão detalhada 
+            border-top-width: 2px;
+            border-top-style: solid;
+            border-top-color: darkslategray;
+            border-bottom: 4px;
+            border-bottom-style: solid;
+            border-bottom-color: darkslategray; */
+
+            /* versão abreviada */
+            border-top:2px solid rgb(219, 228, 93);
+            border-bottom: 4px solid rgb(219, 228, 93);
+        }
+
+        body {
+            background-color: rgb(166, 192, 166);
+        }
+
+        h1 {
+            color: rgb(192, 184, 184);
+            background-color: rgb(71, 4, 4);
+            text-align: center;
+            font-family: Impact;
+            border-radius: 10px;
+            letter-spacing: 1px;
+            font-weight: normal;
+        }
+   
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com CSS e HTML</h1>
+    <hr>
+
+    <h2>HTML</h2>
+    <p style ="color: rgb(92, 41, 139); text-align: right;">Lorem ipsum dolor sit.</p> <!-- CSS inline estilizar paragrafo por paragrafo- emergencial, muito mais trabalhoso se for para o código todo -->
+    <!-- style = "" é um atributo que vai dentro de uma TAG -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis similique veritatis, labore illum nisi quae quo sit laudantium quos numquam?</p>
+
+    <h2>CSS</h2>
+    <p style="color: rgb(49, 49, 109); text-align: right;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam aliquid facilis minus praesentium vel nihil rerum ipsum nostrum! Dolorum, possimus!</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    
+
+    <h2>JS</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eaque?</p>
+    
+
+    
+</body>
+</html>

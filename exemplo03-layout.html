@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout</title>
+<style>
+
+/* para uso das regras de uso geral: *, *::before, *::after { box-sizing: border-box; }
+body { font-family: 'Segoe UI'}, não importa tanto o tam da tela. 
+A media query só entra para ajustes necessários */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* importante para o uso da medidade REM */
+html {font-size: 15px;} /* 16px já é o padrão, mesmo assim colocamos essa tag, mesmo que for trabalhar com 16px para ter como referência de que estamos utilizando o REM - facilitar leitura do código*/
+
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+#container {
+    box-shadow: black 0 0 5px;
+    padding: 5px;
+}
+header {
+    background-color: rgb(209, 107, 162);
+    text-align: center;
+    height: 100px;
+}
+
+
+/* CSS reset - deletar os espaços naturais do HTML utilizados para trabalhar com layouts*/
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {font-size: 2rem; }
+h2 {
+    font-size: 1.2rem;
+    text-align: center;
+ }
+p {font-size: 1.1rem; }
+
+nav {background-color: rgb(255, 255, 255);}
+
+article {padding: 15px;}
+
+#coluna-um {background-color: rgb(17, 151, 24);}
+#coluna-dois {background-color: rgb(190, 188, 19);}
+#coluna-tres {background-color: rgb(145, 37, 37);}
+
+footer { 
+    background-color: rgb(209, 107, 162);
+    text-align: center;
+}
+
+
+/* Regras de design responsivo */
+
+/* 1ª media query: Telas a partir de 700px de largura*/
+
+@media screen and (min-width: 700px) {
+   html {font-size: 18px;}
+   header {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+}
+
+nav {
+    width: 50%;
+    height: 40px;
+}
+
+   main { /* Flex container display aqui dentro ATIVA o flex*/
+       display: flex;
+       flex-wrap: wrap; /* permite a quebra do fluxo, porém precisa indicar o tamanho das colunas para que tenha o devido efeito " #coluna-um, #coluna-dois { width: 50%;}"  */
+
+       /* justify-content: space-around; para utilizar o espaço entre as colunas, é preciso diminuir o width abaixo, para dar espaço. 50% deixou sem espaço. */
+       
+    }
+    #coluna-um, #coluna-dois { width: 50%;}
+
+}
+
+@media screen and (min-width: 800px) {
+    html {font-size: 20px;}
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #coluna-um, #coluna-dois, #coluna-tres { 
+        width: 33.33%;
+    } 
+
+    #container {
+        max-width: 1200px;
+        margin: auto
+    }
+    
+}
+
+
+
+</style>
+</head>
+<body>
+<div id="container">
+    <!-- CABEÇALHO -->
+    <header>
+        <h1>Site XYZ</h1>    
+        <nav>
+            <a href=""><b>Link 1</b></a>
+            <a href=""><b>Link 2</b></a>
+            <a href=""><b>Link 3</b></a>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO --><!-- para conteúco complementar pode utilizar <aside></aside> -->
+
+    <main>
+
+    <article id="coluna-um">  
+       <h2>UM</h2>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sunt ipsum consectetur explicabo possimus laboriosam tenetur id iure quas molestiae eaque modi, ex tempora aliquam vitae esse? Quaerat eos libero recusandae perspiciatis ratione ullam incidunt, ex rerum ut voluptate, tenetur, odio sint. At deleniti officia possimus a temporibus distinctio sunt.</p>       
+    </article>   
+
+    <article id="coluna-dois">    
+        <h2>DOIS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sunt ipsum consectetur explicabo possimus laboriosam tenetur id iure quas molestiae eaque modi, ex tempora aliquam vitae esse? Quaerat eos libero recusandae perspiciatis ratione ullam incidunt, ex rerum ut voluptate, tenetur, odio sint. At deleniti officia possimus a temporibus distinctio sunt.</p>         
+    </article>
+
+    <article id="coluna-tres">    
+        <h2>TRES</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sunt ipsum consectetur explicabo possimus laboriosam tenetur id iure quas molestiae eaque modi, ex tempora aliquam vitae esse? Quaerat eos libero recusandae perspiciatis ratione ullam incidunt, ex rerum ut voluptate, tenetur, odio sint. At deleniti officia possimus a temporibus distinctio sunt.</p>        
+    </article>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p><b>Layout de Exemplo</b></p>
+    </footer>
+
+</div>    
+</body>
+</html>
+
+
+<!-- PRECEDÊNCIA DE SELETORES NO CSS -->
+
+<!-- seletor ID (1º) -->
+<!-- seletor CLASS (2º) -->
+<!-- seletor TAG (3º) -->
